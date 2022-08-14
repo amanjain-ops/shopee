@@ -5,6 +5,7 @@ import 'package:shopee/services/remote_services.dart';
 class ProductController extends GetxController {
   var isLoading = true.obs;
   var productItems = <Product>[].obs;
+  static var favItems = <Product>[].obs;
 
   @override
   void onInit() {
@@ -23,4 +24,5 @@ class ProductController extends GetxController {
       isLoading(false);
     }
   }
+
 }
