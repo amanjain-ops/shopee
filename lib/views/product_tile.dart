@@ -4,11 +4,13 @@ import 'package:shopee/models/product.dart';
 import 'package:get/get.dart';
 
 class ProductTile extends StatelessWidget {
-  const ProductTile({Key? key, required this.product}) : super(key: key);
+  ProductTile({Key? key, required this.product,}) : super(key: key);
   final Product product;
-
+  // int? count = 0;
+  static var count = 0.obs;
   @override
   Widget build(BuildContext context) {
+    
     return Card(
       elevation: 2,
       child: Padding(
@@ -38,9 +40,14 @@ class ProductTile extends StatelessWidget {
                         backgroundColor: Colors.white,
                         child: IconButton(
                           icon: product.isFavorite.value
-                              ? Icon(Icons.favorite_rounded)
-                              : Icon(Icons.favorite_border),
+                              ? const Icon(Icons.favorite_rounded)
+                              : const Icon(Icons.favorite_border),
                           onPressed: () {
+                            if(product.isFavorite.value){
+                              ProductController.favItems.remove(product);
+                            }else{
+                              ProductController.favItems.add(product);
+                            }
                             product.isFavorite.toggle();
                           },
                         ),

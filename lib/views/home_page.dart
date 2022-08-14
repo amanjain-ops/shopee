@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shopee/controllers/product_conteoller.dart';
+import 'package:shopee/views/favorite_page.dart';
 import 'package:shopee/views/product_tile.dart';
 import 'package:staggered_grid_view_flutter/widgets/staggered_grid_view.dart';
 import 'package:staggered_grid_view_flutter/widgets/staggered_tile.dart';
@@ -44,8 +45,10 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
                 IconButton(
-                  icon: const Icon(Icons.view_list_rounded),
-                  onPressed: () => () {},
+                  icon: const  Icon(Icons.favorite_rounded),
+                  onPressed: () {
+                    Get.toNamed('/fav');
+                  },
                 ),
                 IconButton(
                   icon: const Icon(Icons.grid_view),
