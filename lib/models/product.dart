@@ -3,6 +3,8 @@
 //     final product = productFromJson(jsonString);
 
 
+// ignore_for_file: prefer_null_aware_operators, prefer_if_null_operators, constant_identifier_names, prefer_conditional_assignment
+
 import 'dart:convert';
 
 import 'package:get/get.dart';
