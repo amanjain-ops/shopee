@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shopee/controllers/product_conteoller.dart';
-import 'package:shopee/views/favorite_page.dart';
 import 'package:shopee/views/product_tile.dart';
 import 'package:staggered_grid_view_flutter/widgets/staggered_grid_view.dart';
 import 'package:staggered_grid_view_flutter/widgets/staggered_tile.dart';
