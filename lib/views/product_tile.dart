@@ -2,18 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:shopee/controllers/product_conteoller.dart';
 import 'package:shopee/models/product.dart';
 import 'package:get/get.dart';
+import 'package:shopee/views/product_view.dart';
 
 class ProductTile extends StatelessWidget {
   const ProductTile({Key? key, required this.product,}) : super(key: key);
   final Product product;
-  // int? count = 0;
-  static var count = 0.obs;
   @override
   Widget build(BuildContext context) {
     
     return InkWell(
       onTap: () {
-        Get.toNamed('view',arguments: {
+        Get.to(()=>ProductView(product: product,),arguments: {
+          'id': product.id,
           'name': product.name,
           'des': product.description,
           'image': product.imageLink,
