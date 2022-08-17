@@ -24,7 +24,7 @@ class FavoritePage extends StatelessWidget {
             color: Colors.black,
           ),
           onPressed: () {
-            Get.off(() => HomePage());
+            Get.back();
           },
         ),
         title: const Text(
