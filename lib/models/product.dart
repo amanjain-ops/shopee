@@ -2,7 +2,6 @@
 //
 //     final product = productFromJson(jsonString);
 
-
 // ignore_for_file: prefer_null_aware_operators, prefer_if_null_operators, constant_identifier_names, prefer_conditional_assignment
 
 import 'dart:convert';
@@ -138,7 +137,7 @@ class EnumValues<T> {
 
   Map<T, String>? get reverse {
     if (reverseMap == null) {
-      reverseMap = map.map((k, v) =>  MapEntry(v, k));
+      reverseMap = map.map((k, v) => MapEntry(v, k));
     }
     return reverseMap;
   }
