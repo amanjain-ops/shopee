@@ -4,6 +4,8 @@ import 'package:shopee/controllers/cart_controller.dart';
 import 'package:shopee/controllers/product_conteoller.dart';
 import 'package:shopee/models/product.dart';
 import 'package:shopee/views/cart_product_view.dart';
+import 'package:shopee/views/home_page.dart';
+
 
 class ProductView extends StatelessWidget {
   ProductView({Key? key, required this.product}) : super(key: key);
@@ -22,6 +24,7 @@ class ProductView extends StatelessWidget {
           icon: Icon(Icons.adaptive.arrow_back, color: Colors.black),
           onPressed: () {
             Get.back();
+            // Get.off(()=> HomePage());
           },
         ),
         actions: [
@@ -30,7 +33,9 @@ class ProductView extends StatelessWidget {
               Icons.shopping_cart,
               color: Colors.black,
             ),
-            onPressed: () {},
+            onPressed: () {
+              Get.to(()=>CartView());
+            },
           ),
         ],
       ),
@@ -130,13 +135,13 @@ class ProductView extends StatelessWidget {
 
                   // Buttons add to cart
 
-                  GestureDetector(
+                  InkWell(
                     onTap: () {
                       // print(product.name);
                       cartController.addToCart(product);
                       // cartController.addToCart(cartController.cartItems[Get.arguments['id']]);
                       Get.to(() => CartView(
-                            product: product,
+                            // product: product,
                           ));
                     },
                     child: Container(
