@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shopee/controllers/product_conteoller.dart';
+import 'package:shopee/views/cart_product_view.dart';
 import 'package:shopee/views/product_tile.dart';
 import 'package:staggered_grid_view_flutter/widgets/staggered_grid_view.dart';
 import 'package:staggered_grid_view_flutter/widgets/staggered_tile.dart';
@@ -23,7 +24,9 @@ class HomePage extends StatelessWidget {
               Icons.shopping_cart,
               color: Colors.black,
             ),
-            onPressed: () {},
+            onPressed: () {
+              Get.to(CartView());
+            },
           ),
         ],
       ),
